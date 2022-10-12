@@ -1,7 +1,8 @@
+import React from 'react'
 import {Link, useLocation} from 'react-router-dom'
 import Container from './Container'
 
-const Navigation = () => {
+const Navigation: React.FC = () => {
   const activePage = useLocation().pathname
 
   return (
