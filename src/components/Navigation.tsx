@@ -1,8 +1,8 @@
-import React from 'react'
+import {FC, HTMLAttributes} from 'react'
 import {Link, useLocation} from 'react-router-dom'
 import Container from './Container'
 
-const Navigation: React.FC = () => {
+const Navigation: FC<HTMLAttributes<HTMLElement>> = () => {
   const activePage = useLocation().pathname
 
   return (
@@ -15,8 +15,7 @@ const Navigation: React.FC = () => {
               className={` hover:text-gray-100 transition-colors
           ${
             activePage === '/' && 'text-gray-100 underline underline-offset-4'
-          }`}
-            >
+          }`}>
               <Link to={'/'}> Home </Link>
             </li>
             <li
@@ -24,8 +23,7 @@ const Navigation: React.FC = () => {
           ${
             activePage === '/favorites' &&
             'text-gray-100 underline underline-offset-4'
-          }`}
-            >
+          }`}>
               <Link to={'/favorites'}> Favorites </Link>
             </li>
           </ul>
