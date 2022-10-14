@@ -6,7 +6,7 @@ interface CardProps extends HTMLAttributes<HTMLElement> {
 }
 
 const Card: FC<CardProps> = ({repo}) => (
-  <div key={repo.id}>
+  <div>
     <p>{repo.url}</p>
     <button className='border p-2'>Add to favorites</button>
   </div>

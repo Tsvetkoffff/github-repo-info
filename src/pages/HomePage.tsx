@@ -67,7 +67,12 @@ const HomePage = () => {
         {areReposLoading ? (
           <Loader />
         ) : (
-          repos?.map(repo => <Card repo={repo} />)
+          repos?.map(repo => (
+            <Card
+              repo={repo}
+              key={repo.id}
+            />
+          ))
         )}
       </div>
     </>
